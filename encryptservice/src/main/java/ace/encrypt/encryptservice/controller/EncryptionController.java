@@ -1,6 +1,6 @@
 package ace.encrypt.encryptservice.controller;
 
-import ace.encrypt.encryptservice.service.EncryptionService;
+import ace.encrypt.encryptservice.service.EncryptionServiceImp;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/encryption")
 public class EncryptionController {
-    private final EncryptionService encryptionService;
+    private final EncryptionServiceImp encryptionService;
 
-    public EncryptionController(EncryptionService encryptionService) {
+    public EncryptionController(EncryptionServiceImp encryptionService) {
         this.encryptionService = encryptionService;
     }
 
